@@ -10,7 +10,7 @@ Autoloading means the automatic loading of the files required for your module. T
 
 ### 1. problem 
 
-let directory struct be like
+* let directory struct be like
 ```
 main.py
 project_dir/
@@ -24,7 +24,7 @@ project_dir/
 |   |-- package_file_2.py
 ```
 
-and code
+* and code
 ```python
 """example.py"""
 from test_package import package_file_0
@@ -35,13 +35,11 @@ from test_package import package_file_n
 but we are too lazy to type a lot letters
 
 ### 2. solution
-
-install
+* install
 ```bash
 pip install -U import-autoload
 ```
-
-add two lines to `__init__.py` 
+* add two lines to `__init__.py` 
 ```python
 """__init__.py"""
 from autoload import autoload
@@ -52,8 +50,7 @@ __all__ = autoload()
 """example.py"""
 from test_package import *
 ```
-
-or variant
+* or variant
 ```python
 """main.py"""
 from autoload import autoload
@@ -66,7 +63,7 @@ autoload("project_dir.test_package", pattern="package_file_[0123]")
 2. `pattern` like in `fnmatch(filename, pattern)`, default `*.py`
 
 ### attention
-seems to require python version >= 3.4. if you were able to test an early version, please contact me
+* seems to require python version >= 3.4. if you were able to test an early version, please contact me
 
 ### how it work
 * checks path to module and call `importlib.import_module()`
