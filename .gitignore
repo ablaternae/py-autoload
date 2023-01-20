@@ -1,0 +1,51 @@
+# Created by https://www.toptal.com/developers/gitignore/api/linux,windows,macos,pycharm+all,pydev,eclipse,netbeans,visualstudiocode,sublimetext,textmate,python,pythonvanilla,flask,django,dotenv,git,backup
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,windows,macos,pycharm+all,pydev,eclipse,netbeans,visualstudiocode,sublimetext,textmate,python,pythonvanilla,flask,django,dotenv,git,backup
+
+# Git
+*.orig
+*.github_token
+*.github_secrets
+
+# Backup
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyBuilder
+.pybuilder/
+target/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+__pycache__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
