@@ -3,7 +3,7 @@
 #   autoloader
 #
 
-__version__ = "0.1.1"
+__version__ = "0.1.2-beta-3"
 
 import os, sys, importlib, importlib.util
 from fnmatch import fnmatch
@@ -40,6 +40,7 @@ def autoload(module_name=None, pattern=None):
         module_name = _current_
 
     elif module_name is not None and pattern is not None:
+        module_name = _current_ + "." + module_name
         pattern = pattern + ("" if ".py" == pattern[-3::] else PATTERN)
 
     else:
